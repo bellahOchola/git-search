@@ -17,11 +17,14 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search user or repo" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-2" type="search" placeholder="Search user or repo" aria-label="Search" name="termSearch" [(ngModel)]="termSearch">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)='search()'>Search</button>
       </form>
     </div>
   </nav>
+  <div>
+    <app-user-details></app-user-details>
+  </div>
   <div class="container">
       <div class="row">
         <div class="col-md-4" *ngFor ='let repo of repository'>
@@ -31,7 +34,7 @@
                             <h5 class="card-title">Repo Name: {{repo.repoName}}</h5>
                             <p class="card-text">Description:{{repo.description}}</p>
                             <p class="card-text">Language:{{repo.language}}</p>
-                            <p class="card-text">Created on:{{repo.creation}}</p>
+                            <!-- <p class="card-text">Created on:{{repo.creation}}</p> -->
                             <a href="#" class="card-link">View</a>
                             <!-- <a href="#" class="card-link">Another link</a> -->
                         </div>
