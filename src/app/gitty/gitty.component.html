@@ -26,7 +26,7 @@
     <p>{{user.login}}</p>
     <p>{{user.following}}</p>
     <p>{{user.followers}}</p>
-    <p>{{user.created_at|dateCount}}</p>
+    <p>{{user.created_at | dateCount}}</p>
     <!-- <app-user-details></app-user-details> -->
 
   </div>
@@ -39,7 +39,7 @@
                             <h5 class="card-title">Repo Name: {{reps.name}}</h5>
                             <p class="card-text">Description:{{reps.description}}</p>
                             <p class="card-text">Language:{{reps.language}}</p>
-                            <p class="card-text">Created on:{{reps.created_at}}</p>
+                            <p class="card-text">Created on:{{reps.created_at | dateCount}}</p>
                             <button type="button" class="btn btn-danger"><a href="{{reps.html_url}}" class="card-link">View</a></button>
                           
                         </div>
