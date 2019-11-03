@@ -1,0 +1,12 @@
+nav{
+    background-color: black;
+    height:40%;
+    /* position:sticky; */
+}
+a{
+    color:white;
+    margin-right: 30px;
+}
+a:hover{
+    text-shadow: 2px 2px 3px blue;
+}
