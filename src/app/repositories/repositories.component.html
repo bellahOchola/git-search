@@ -1,1 +1,19 @@
-<p>repositories works!</p>
+<div class="container">
+        <div class="row">
+          <div class="col-md-4" *ngFor ='let reps of rep'>
+                  <div class="card" style="width: 18rem;">
+                      <!-- <div *ngFor ='let repo of rep'> -->
+                          <div class="card-body space">
+                              <h5 class="card-title">Repo Name: {{reps.name}}</h5>
+                              <p class="card-text">Description:{{reps.description}}</p>
+                              <p class="card-text">Language:{{reps.language}}</p>
+                              <p class="card-text">Created:{{reps.created_at | dateCount}}</p>
+                              <button type="button" class="btn btn-danger"><a href="{{reps.html_url}}" class="card-link">View</a></button>
+                            
+                          </div>
+                      <!-- </div> -->
+                  </div>
+          </div>
+      </div>
+    </div>
+    <
