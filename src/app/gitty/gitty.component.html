@@ -12,30 +12,34 @@
           <a class="nav-link" href="#" tabindex="-1">Settings</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
+      <!-- <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search user or repo" aria-label="Search" name="termSearch" [(ngModel)]="termSearch">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)='search()'>Search</button>
-      </form>
+      </form> -->
     </div>
   </nav>
+  <div>
+      <app-form-search></app-form-search>
+  </div>
   <div >
     <img src="{{user.avatar_url}}" alt="">
     <p>{{user.login}}</p>
     <p>{{user.following}}</p>
     <p>{{user.followers}}</p>
+    <p>{{user.created_at}}</p>
     <!-- <app-user-details></app-user-details> -->
 
   </div>
   <div class="container">
       <div class="row">
-        <div class="col-md-4" *ngFor ='let repo of rep'>
+        <div class="col-md-4" *ngFor ='let reps of rep'>
                 <div class="card" style="width: 18rem;">
                     <!-- <div *ngFor ='let repo of rep'> -->
                         <div class="card-body space">
-                            <h5 class="card-title">Repo Name: {{repo.name}}</h5>
-                            <p class="card-text">Description:</p>
-                            <p class="card-text">Language:</p>
-                            <!-- <p class="card-text">Created on:{{repo.creation}}</p> -->
+                            <h5 class="card-title">Repo Name: {{reps.name}}</h5>
+                            <p class="card-text">Description:{{reps.description}}</p>
+                            <p class="card-text">Language:{{reps.language}}</p>
+                            <p class="card-text">Created on:{{reps.created_at}}</p>
                             <a href="#" class="card-link">View</a>
                             <!-- <a href="#" class="card-link">Another link</a> -->
                         </div>

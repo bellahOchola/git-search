@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Repository } from '../class/repository';
 import { User } from '../class/user';
 import { GitService } from '../services/git.service';
@@ -10,22 +10,15 @@ import { GitService } from '../services/git.service';
 export class GittyComponent implements OnInit {
   user:User;
   rep:Repository;
+  termSearch:string; 
   
-  @Output() emitSearch = new EventEmitter<any>()
-  // service:GitService;
-  termSearch:string;
+ 
   constructor(public gitService:GitService, public repoService:GitService) { 
-    // this.service=gitService;
+    // this.termSearch= new User;
+    // this.gitService=GitService;
   }
-  
-//   search(){
-//     this.emitSearch.emit(this.termSearch);
-//     this.termSearch = "";
-//     this.gitService.searchUser(this.termSearch);
-// }
-
-  search(termSearch){
-    this.gitService.searchUser(this.termSearch).then(
+searchs(termSearch){
+    this.gitService.searchUser(termSearch).then(
       (success)=>{
         this.user = this.gitService.userProfile;
       },
@@ -33,9 +26,11 @@ export class GittyComponent implements OnInit {
         console.log(error)
       }
     );
-    this.repoService.getRepository(this.termSearch).then(
+    this.repoService.getRepository(termSearch).then(
       (success)=>{
         this.rep = this.repoService.reposs;
+        console.log(this.rep);
+        
         },      
         (error)=>{
           console.log(error)
@@ -44,7 +39,7 @@ export class GittyComponent implements OnInit {
   }
 
   ngOnInit() {
-  this.search("bellahOchola");
+  this.searchs("bellahOchola");
   }
 
 }
