@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { GittyComponent } from './gitty/gitty.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { FormSearchComponent } from './form-search/form-search.component';
+import { DateCountPipe } from './pipes/date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     GittyComponent,
     UserDetailsComponent,
-    FormSearchComponent
+    FormSearchComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
