@@ -1,0 +1,15 @@
+.card{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color:#E5E4E2;
+    border:1px solid white;
+    box-shadow: 2px 2px 5px grey;
+    height:90%;
+}
+
+button> a{
+    color: antiquewhite;
+}
+body{
+   
+}

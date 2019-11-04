@@ -8,7 +8,7 @@ import { GitService } from '../services/git.service';
   styleUrls: ['./form-search.component.css']
 })
 export class FormSearchComponent implements OnInit {
-
+  gitService:GitService;
   @Output() emitSearch = new EventEmitter<any>()
   termSearch:string;
    
@@ -18,8 +18,7 @@ export class FormSearchComponent implements OnInit {
   }
   search(){
     this.emitSearch.emit(this.termSearch);
-    this.termSearch = "";
-    // this.gitService.searchUser(this.termSearch);
+    // this.termSearch = "";
+    this.gitService.searchUser(this.termSearch);
 }
-
 }
