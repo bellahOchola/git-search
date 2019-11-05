@@ -1,5 +1,5 @@
 <body>
-    <app-form-search (searchOutput)= "getRepo($event)"></app-form-search>
+    <app-form-search (emitSearch)= "getRepo($event)"></app-form-search>
     <div class="container">
             <div class="row">
                 <div class="col-md-4" *ngFor ='let reps of rep'>

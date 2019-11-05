@@ -30,7 +30,7 @@ export class GitService {
       avatar_url:string;
       created_at:Date;
     }
-  let searchEndpoint = "https://api.github.com/users/"+termSearch+"?api_key="+environment.gittyKey;
+  let searchEndpoint = "https://api.github.com/users/"+termSearch+"?access_token="+environment.gittyKey;
     let promise =  new Promise((resolve, reject)=>{
         this.http.get<Received>(searchEndpoint).toPromise().then(
           (results)=>{

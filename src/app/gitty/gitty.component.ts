@@ -11,8 +11,8 @@ export class GittyComponent implements OnInit {
   user:User;
   rep:Repository;
   termSearch:string; 
-  @Output() emitSearch = new EventEmitter<any>()
-  // termSearch:string;
+//   @Output() emitSearch = new EventEmitter<any>()
+//   // termSearch:string;
   
  
   constructor(public gitService:GitService, public repoService:GitService) { 
@@ -20,15 +20,16 @@ export class GittyComponent implements OnInit {
     // this.gitService=GitService;
   }
 
-  search(){
-    this.emitSearch.emit(this.termSearch);
-    // this.termSearch = "";
-    this.gitService.searchUser(this.termSearch);
-}
+//   search(){
+//     this.emitSearch.emit(this.termSearch);
+//     // this.termSearch = "";
+//     this.gitService.searchUser(this.termSearch);
+// }
 searching(termSearch){
     this.gitService.searchUser(termSearch).then(
       (success)=>{
         this.user = this.gitService.userProfile;
+        console.log(this.user);
       },
       (error)=>{
         console.log(error)

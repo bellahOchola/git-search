@@ -8,17 +8,17 @@ import { GitService } from '../services/git.service';
   styleUrls: ['./form-search.component.css']
 })
 export class FormSearchComponent implements OnInit {
-  gitService:GitService;
+  // gitService:GitService;
   @Output() emitSearch = new EventEmitter<any>()
   termSearch:string;
    
-  constructor() { }
+  constructor(private gitService:GitService) { }
 
   ngOnInit() {
   }
   search(){
     this.emitSearch.emit(this.termSearch);
     // this.termSearch = "";
-    this.gitService.searchUser(this.termSearch);
+    // this.gitService.searchUser(this.termSearch);
 }
 }

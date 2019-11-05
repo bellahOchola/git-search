@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  gittyKey:"7ced44b57d181a042438f26b7bc454f62da6acd5"
+  gittyKey:"25f5bdd510a6368162093b34e1243a4445ce13e3"
 };
 
 /*

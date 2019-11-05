@@ -1,13 +1,16 @@
 # GitSearch.
 #### This application enables one to access their Github information, 3/11/2019
 #### bellahOchola
-##Description
+
+## Description
 This application enables user to access their github information. They simply enter their github name on the search button and their repos and profile is accessed and shown to them.They can also search their repos.
-##BDD
+
+## BDD
 When the website is fully loaded, the first thing the user sees is bellahOchola's github profile and repositories. In any case the user wants to access their information they simply fill their username and their details are displayed as well.
 Their is also a navbar where the user can intertwine between their profile and just their repositories. On clicking the repositories, the user is taken to a whole new page containing their repositories.
 On the card holding the repos information,there is a view button which when clicked enables the user to view their repositories on gihub.
-##Technologies Used
+
+## Technologies Used
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.10.with HTML5, CSS and bootsrap
 
 ## Development server
